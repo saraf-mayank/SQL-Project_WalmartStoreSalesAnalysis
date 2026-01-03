@@ -130,7 +130,6 @@ SELECT payment_type,
 FROM sales
 GROUP BY payment_type
 ORDER BY cnt DESC;
--- Result : Ewallet
 
 -- What is the most selling product line
 SELECT
@@ -139,7 +138,6 @@ SELECT
 FROM sales
 GROUP BY product_line
 ORDER BY qty DESC;
--- Result : Electronics accessories
 
 -- What is the total revenue by month
 SELECT
@@ -156,7 +154,6 @@ SELECT
 FROM sales
 GROUP BY month_name
 ORDER BY COGS DESC;
--- Result : Jannuary
 
 -- What product line had the largest revenue?
 SELECT 
@@ -165,7 +162,6 @@ SELECT
 FROM sales
 GROUP BY product_line
 ORDER BY revenue DESC;
--- Result : Food and beverages
 
 -- What is the city with the largest revenue?
 SELECT 
@@ -174,7 +170,6 @@ SELECT
 FROM sales
 GROUP BY city
 ORDER BY revenue DESC;
--- Result : Naypyitaw
 
 -- What product line had the largest VAT?
 SELECT 
@@ -183,10 +178,8 @@ SELECT
 FROM sales
 GROUP BY product_line
 ORDER BY vat DESC;
--- Result : Home and lifestyle
 
--- Fetch each product line and add a column to those product line 
--- showing "Good", "Bad". Good if its greater than average sales
+-- Fetch each product line and add a column to those product line showing "Good", "Bad". Good if its greater than average sales
 
 SELECT 
 	product_line,
