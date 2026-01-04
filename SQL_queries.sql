@@ -216,3 +216,55 @@ SELECT product_line, ROUND(AVG(rating),1)
 FROM sales
 GROUP BY product_line;
 		
+-- --------------------------------------------------------------------
+-- ---------------------------- Customer -------------------------------
+-- --------------------------------------------------------------------
+
+-- How many unique customer types does the data have?
+SELECT 
+	DISTINCT customer_type
+FROM sales;
+
+-- How many unique payment methods does the data have?
+SELECT 
+	DISTINCT payment_type
+FROM sales;
+
+-- Which is the most common customer type?
+SELECT 
+	customer_type,
+    COUNT(customer_type)
+FROM sales
+GROUP BY customer_type;
+
+-- Which customer type buys the most?
+SELECT 
+	customer_type,
+    ROUND(SUM(total_revenue),2) AS most_buys
+FROM sales
+GROUP BY customer_type
+ORDER BY most_buys DESC;
+
+-- What is the gender of most of the customers?
+SELECT 
+	gender,
+    COUNT(gender)
+FROM sales
+GROUP BY gender;
+
+-- What is the gender distribution per branch?
+SELECT
+	branch,
+    gender,
+    count(gender) AS gender_dist
+FROM sales
+GROUP BY gender, branch
+ORDER BY branch;
+
+-- What is the average rating by gender type?
+
+SELECT
+	gender,
+    ROUND(AVG(rating),1) AS avg_rating
+FROM sales
+GROUP BY gender;
