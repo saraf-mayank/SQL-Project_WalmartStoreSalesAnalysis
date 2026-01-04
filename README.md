@@ -89,3 +89,14 @@ The dataset was obtained from the [the Kaggle Walmart Store Sales Forecasting Co
 8. Which branch sold more products than the average product sold?
 9. What is the most common product line by gender?
 12. What is the average rating of each product line?
+
+### Customer
+
+1. How many unique customer types does the data have?
+2. How many unique payment methods does the data have?
+3. Which is the most common customer type?
+4. Which customer type buys the most?
+5. What is the gender of most of the customers?
+6. What is the gender distribution per branch?
+7. What is the average rating by gender type?
+
