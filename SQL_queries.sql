@@ -268,3 +268,28 @@ SELECT
     ROUND(AVG(rating),1) AS avg_rating
 FROM sales
 GROUP BY gender;
+
+
+-- --------------------------------------------------------------------
+-- ---------------------------- Sales -------------------------------
+-- --------------------------------------------------------------------
+
+-- Number of sales made at each time of the day per weekday
+SELECT
+	day_name,
+    SUM(CASE WHEN time_of_day = 'Morning' THEN 1 ELSE 0 END) AS Morning,
+    SUM(CASE WHEN time_of_day = 'Afternoon' THEN 1 ELSE 0 END) AS Afternoon,
+    SUM(CASE WHEN time_of_day = 'Evening' THEN 1 ELSE 0 END) AS Evening
+    FROM sales
+    GROUP BY day_name
+    ORDER BY FIELD(day_name,
+  'Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday');
+
+-- Which of the customer types brings the most revenue?
+SELECT 
+	customer_type, 
+    ROUND(SUM(total_revenue),2) AS revenue 
+    FROM sales 
+    GROUP BY customer_type 
+    ORDER BY revenue DESC;
+
