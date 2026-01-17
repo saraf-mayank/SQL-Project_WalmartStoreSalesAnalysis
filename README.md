@@ -100,3 +100,10 @@ The dataset was obtained from the [the Kaggle Walmart Store Sales Forecasting Co
 6. What is the gender distribution per branch?
 7. What is the average rating by gender type?
 
+### Sales
+
+Number of sales made at each time of the day.
+Which of the customer types brings the most revenue?
+Which city has the largest tax percentage/ VAT (Value Added Tax)?
+Which customer type pays the most in tax percentage/ VAT (Value Added Tax)?
+
