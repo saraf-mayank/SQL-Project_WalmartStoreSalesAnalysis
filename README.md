@@ -102,8 +102,8 @@ The dataset was obtained from the [the Kaggle Walmart Store Sales Forecasting Co
 
 ### Sales
 
-Number of sales made at each time of the day.
-Which of the customer types brings the most revenue?
-Which city has the largest tax percentage/ VAT (Value Added Tax)?
-Which customer type pays the most in tax percentage/ VAT (Value Added Tax)?
+1. Number of sales made at each time of the day.
+2. Which of the customer types brings the most revenue?
+3. Which city has the largest tax percentage/ VAT (Value Added Tax)?
+4. Which customer type pays the most in tax percentage/ VAT (Value Added Tax)?
 
