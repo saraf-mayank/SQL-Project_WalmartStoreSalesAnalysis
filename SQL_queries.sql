@@ -274,7 +274,7 @@ GROUP BY gender;
 -- ---------------------------- Sales -------------------------------
 -- --------------------------------------------------------------------
 
--- Number of sales made at each time of the day per weekday
+-- Number of sales made at each time of the day.
 SELECT
 	day_name,
     SUM(CASE WHEN time_of_day = 'Morning' THEN 1 ELSE 0 END) AS Morning,
