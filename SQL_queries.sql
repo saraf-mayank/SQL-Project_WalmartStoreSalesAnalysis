@@ -293,3 +293,18 @@ SELECT
     GROUP BY customer_type 
     ORDER BY revenue DESC;
 
+-- Which city has the largest tax percentage/ VAT (**Value Added Tax**)?
+SELECT 
+	city, 
+	ROUND(AVG(tax_pct),2) AS largest_tax_pct
+FROM sales
+GROUP BY city
+ORDER BY largest_tax_pct DESC;
+
+-- Which customer type pays the most in VAT?
+SELECT 
+	customer_type, 
+	ROUND(AVG(tax_pct),2) AS largest_tax_pct
+FROM sales
+GROUP BY customer_type
+ORDER BY largest_tax_pct DESC;
